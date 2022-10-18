@@ -1,9 +1,8 @@
-import React,{useContext, useEffect, useState} from 'react'
+import React,{useContext, useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import loginImg from '../assets/portada.jpg'
 import axios from "axios"
 import { UserContext } from '../context/UserContext'
-
 
 const Login = () => {
     
@@ -33,13 +32,13 @@ const Login = () => {
             }).catch(function (error) {
                 const {data} = error.response
                 setInputError(data.message)
-                
               })
               navigate('/dashboard')
         } catch (e) {
             //console.log(e)
         }
     }
+
     const existError = () =>{
         if (inputError){
             return true
@@ -48,7 +47,6 @@ const Login = () => {
         }   
         
     }
-    
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 h-screen w-full'>
         <div className='hidden sm:block'>
@@ -66,7 +64,6 @@ const Login = () => {
                     <input onChange={(e)=>{handleInput(e)}} className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="password" type="password" placeholder="Contraseña"/>
                 </div>
                 {existError ? <p className="text-red-500 text-sm italic">{inputError}</p>:""}
-                
                 <div className='flex justify-between text-gray-400 py-2'>
                     <p className='flex items-center'><input className='mr-2' type="checkbox" /> Recuerdame</p>
                     <Link to={'/registro'} className="font-medium  hover:underline text-[#406343]"> Registrate</Link>

@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   const {auth,isAuth} =useContext(UserContext)
   const navigate = useNavigate()
-  
+
   useEffect(()=>{
     if(!isAuth()){navigate('/login')}
   },[])  
@@ -20,7 +20,7 @@ const Dashboard = () => {
       <div className="min-h-screen">
         <Sidebar />
         <Navbar />
-        <main className="pl-[390px] pt-[89px] bg-[#F3EFCC] h-full z-30">
+        <main className="lg:pl-[390px] pt-[89px] bg-[#F3EFCC] h-full z-30">
           <Outlet/>
         </main>
       </div>
