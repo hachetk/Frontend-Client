@@ -48,7 +48,7 @@ const Perfil = () => {
 
   return (
     <>
-    <div className='grid grid-cols-1 lg:grid-flow-col'> 
+    <div className='grid grid-cols-1 xl:grid-flow-col'> 
     <div className=' px-5 py-2 row-span-2'>
       <div className='bg-white rounded-xl shadow-lg p-5 '>
       <h6 class="text-black font-bold mt-3 mb-6 uppercase text-xl text-center">Perfil</h6>
