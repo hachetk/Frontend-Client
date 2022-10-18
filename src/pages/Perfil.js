@@ -51,7 +51,7 @@ const Perfil = () => {
     <div className='grid grid-cols-1 xl:grid-flow-col'> 
     <div className=' px-5 py-2 row-span-2'>
       <div className='bg-white rounded-xl shadow-lg p-5 '>
-      <h6 class="text-black font-bold mt-3 mb-6 uppercase text-xl text-center">Perfil</h6>
+      <h6 class="text-black font-bold mt-3 mb-6 uppercase text-xl text-center">PErfil</h6>
       <div class="flex flex-wrap pb-5  justify-center">
           <div className='flex items-center justify-center  pb-10'>
             <img
