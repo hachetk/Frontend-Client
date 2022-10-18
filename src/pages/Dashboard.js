@@ -1,12 +1,19 @@
-import React, { useContext } from 'react'
-import { Outlet,useNavigate } from 'react-router-dom';
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import React, { useContext,useEffect } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom';
+import Navbar from "../components/home/Navbar";
+import Sidebar from "../components/home/Sidebar";
 import { UserContext } from '../context/UserContext'
+
+
 const Dashboard = () => {
 
-  const {auth} =useContext(UserContext)
+  const {auth,isAuth} =useContext(UserContext)
   const navigate = useNavigate()
+  
+  useEffect(()=>{
+    if(!isAuth()){navigate('/login')}
+  },[])  
+  
   if (auth) {
     return (
       <>
@@ -19,10 +26,12 @@ const Dashboard = () => {
       </div>
       </>
     )
-  }else{
-    console.log(auth)
-    return navigate('/')
   }
+  
+  
+  
+  
+  
 }
 
 export default Dashboard

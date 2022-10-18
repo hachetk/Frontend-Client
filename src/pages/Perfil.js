@@ -24,7 +24,7 @@ const Perfil = () => {
     } catch (e) {
         console.log(e)
     }
-}
+  }
   return (
     <>
     <div className='w-full px-20 py-5  rounded-lg shadow-lg '>

@@ -22,6 +22,7 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="registro" element={<Register />} />
           </Route>
+
           <Route path='/dashboard' element={<Dashboard />}>
             <Route path="inicio" element={<Inicio />} />
             <Route path="cultivos" element={<Cultivos />} />
@@ -29,6 +30,7 @@ function App() {
             <Route path="camas" element={<Camas />} />
             <Route path="perfil" element={<Perfil />} />
           </Route>
+          
             <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

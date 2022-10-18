@@ -1,7 +1,7 @@
 import React, { useContext,useState } from 'react'
 import { RiMenu3Fill, RiCloseLine,RiLogoutBoxRLine,RiHome3Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { UserContext } from '../context/UserContext'
+import { UserContext } from '../../context/UserContext'
 const Sidebar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
@@ -87,11 +87,7 @@ const Sidebar = () => {
         <Link to={'/'} onClick={handleLogout}><RiLogoutBoxRLine className="text-white h-10 w-10"/></Link>
       </div>
    
-      <button
-        onClick={toggleMenu}
-        className="fixed bottom-6 right-6 bg-gray-100 rounded-full p-4 xl:hidden"
-      >
-        {showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
+      <button onClick={toggleMenu}className="fixed bottom-6 right-6 bg-gray-100 rounded-full p-4 xl:hidden">{showMenu ? <RiCloseLine /> : <RiMenu3Fill />}
       </button>
     </div>
   );

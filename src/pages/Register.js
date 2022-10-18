@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{ useState} from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import loginImg from '../assets/portada.jpg'
 import axios from "axios"
 
+
 const Register = () => {
+
     const [input, setInput] =useState({
         email:'',
         password:''
@@ -33,23 +35,23 @@ const Register = () => {
                 <h2 className='text-4xl text-[#505568] font-bold text-center'>Registro</h2>
                 <div className='flex flex-col text-[#505568] '>
                     <label className='pb-3 pt-3'>Nombre</label>
-                    <input onChange={(e)=>{handleInput(e)}} type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="nombre" placeholder="Nombre" />
+                    <input onChange={(e)=>{handleInput(e)}} type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="nombre" placeholder="Nombre" />
                 </div>
                 <div className='flex flex-col text-[#505568] '>
                     <label className='pb-3'>Apellido</label>
-                    <input onChange={(e)=>{handleInput(e)}} type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="apellido" placeholder="Apellido" />
+                    <input onChange={(e)=>{handleInput(e)}} type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="apellido" placeholder="Apellido" />
                 </div>
                 <div className='flex flex-col text-[#505568]'>
                     <label className='pb-3'>Rut</label>
-                    <input onChange={(e)=>{handleInput(e)}} type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="rut" placeholder="Rut" />
+                    <input onChange={(e)=>{handleInput(e)}} type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="rut" placeholder="Rut" />
                 </div>
                 <div className='flex flex-col text-[#505568]'>
                     <label className='pb-3'>Correo</label>
-                    <input onChange={(e)=>{handleInput(e)}} type="text"class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"name="email" placeholder="Correo" />
+                    <input onChange={(e)=>{handleInput(e)}} type="text"className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"name="email" placeholder="Correo" />
                 </div>
                 <div className='flex flex-col text-[#505568]'>
                     <label className='pb-3'>Contraseña</label>
-                    <input onChange={(e)=>{handleInput(e)}} class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name='password' type="password" placeholder="Contraseña"/>
+                    <input onChange={(e)=>{handleInput(e)}} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name='password' type="password" placeholder="Contraseña"/>
                 
                 </div>
                 <button className='w-full my-5 py-2 bg-[#406343] shadow-lg text-white font-semibold rounded-lg'>Registrarse</button>

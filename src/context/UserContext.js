@@ -4,16 +4,18 @@ export const UserContext = createContext()
 
 export const UserProvider = ({children}) => {
     
-    const [auth,setAuth]=useState(false)
+    const [auth,setAuth]=useState(null)
     const [user,setUser]=useState(null)
 
-    const isAuth=()=>{
+    const isAuth= ()=>{
         const loggedUser = window.localStorage.getItem('loggedUser')
         if (loggedUser){
             setUser(JSON.parse(loggedUser))
-            return setAuth(true)
+            setAuth(true)
+            return true
         }else{
-            return setAuth(false)
+            setAuth(false)
+            return false
         }
     }
 

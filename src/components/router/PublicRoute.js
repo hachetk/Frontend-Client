@@ -1,9 +1,14 @@
-import React, { useContext } from 'react'
-import { Outlet } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react'
+import { Outlet, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext'
+
 const PublicRoute = () => {
 
-  const {auth} =useContext(UserContext)
+  const {auth,isAuth} =useContext(UserContext)
+  const navigate = useNavigate()
+  useEffect(()=>{
+    if(isAuth()){navigate('/dashboard')}
+  },[]) 
 
     if (!auth) {
       return (
@@ -13,6 +18,8 @@ const PublicRoute = () => {
           </main>
         </>
       )
+    }else{
+      navigate('/dashboard')
     }
 
 }
