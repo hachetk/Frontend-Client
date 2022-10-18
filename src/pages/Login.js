@@ -33,7 +33,7 @@ const Login = () => {
                 const {data} = error.response
                 setInputError(data.message)
               })
-              navigate('/dashboard')
+              navigate('/dashboard/inicio')
         } catch (e) {
             //console.log(e)
         }

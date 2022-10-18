@@ -20,7 +20,7 @@ const Dashboard = () => {
       <div className="min-h-screen">
         <Sidebar />
         <Navbar />
-        <main className="lg:pl-[390px] pt-[89px] bg-[#F3EFCC] h-full z-30">
+        <main className="lg:pl-[390px] pt-[89px] bg-[#F3EFCC] z-30">
           <Outlet/>
         </main>
       </div>

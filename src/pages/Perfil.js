@@ -48,7 +48,31 @@ const Perfil = () => {
 
   return (
     <>
-    <div className='grid grid-cols-1 sm:grid-cols-2'> 
+    <div className='grid grid-cols-1 lg:grid-flow-col'> 
+    <div className=' px-5 py-2 row-span-2'>
+      <div className='bg-white rounded-xl shadow-lg p-5 '>
+      <h6 class="text-black font-bold mt-3 mb-6 uppercase text-xl text-center">Perfil</h6>
+      <div class="flex flex-wrap pb-5  justify-center">
+          <div className='flex items-center justify-center  pb-10'>
+            <img
+              className="w-60 h-60 object-cover rounded-full ring-4 ring-white"
+              src="https://img.freepik.com/foto-gratis/retrato-hermoso-mujer-joven-posicion-pared-gris_231208-10760.jpg"
+              alt=""
+            />
+          </div>
+          <form onSubmit={handleDelete} className='grid grid-rows-2 '>
+            <div>
+              <div><h1 className='font-bold pl-5 text-3xl'>{user.nombre} {user.apellido}</h1></div> 
+              <div><span className='font-semibold text-xl pl-5'>{user.rut}</span></div> 
+              <div><span className='font-semibold text-xl pl-5'>{user.email}</span></div> 
+            </div>
+            <div className='pt-5 pl-26'>
+              <button className='bg-red-500 w-full hover:bg-red-600 rounded-lg p-3 text-white font-bold '>Eliminar</button>
+            </div>
+          </form>
+      </div>
+      </div>
+    </div>
     <div className=' px-5 py-2'>
       <div className='bg-white rounded-xl shadow-lg p-5 py-3'>
         <h6 class="text-black font-bold mt-3 mb-6 uppercase text-xl text-center">Datos</h6>
@@ -57,7 +81,7 @@ const Perfil = () => {
               <div class="w-full lg:w-6/12 px-4 pb-5">
                 <div>
                   <label for="email" class="text-sm text-gray-700 block mb-1 font-medium">Rut</label>
-                  <input onChange={(e)=>{handleInput(e)}} name="rut" type="text" placeholder={user.rut}  class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full" />
+                  <input onChange={(e)=>{handleInput(e)}} name="rut" type="text" placeholder={user.rut} class="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full" />
                 </div>
               </div>
               <div class="w-full lg:w-6/12 px-4 pb-5">
@@ -80,37 +104,15 @@ const Perfil = () => {
               </div>
             </div>
             <div className='flex items-center justify-center pb-5 gap-10 '>
-              <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Actualizar</button>
-              <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Cancelar</button>
+              <button type="submit" className='bg-[#406343] hover:bg-[#32502E] text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Actualizar</button>
+              <button type="submit" className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Cancelar</button>
             </div>
           </form>
         </div>
     </div>
 
 
-    <div className=' px-5 py-2 '>
-      <div className='bg-white rounded-xl shadow-lg p-5 '>
-      <h6 class="text-black font-bold mt-3 mb-6 uppercase text-xl text-center">Perfil</h6>
-      <div class="flex flex-wrap pb-5">
-          <div className='flex items-center justify-center gap-9 '>
-            <img
-              className="w-60 h-60 object-cover rounded-full ring-4 ring-white"
-              src="https://img.freepik.com/foto-gratis/retrato-hermoso-mujer-joven-posicion-pared-gris_231208-10760.jpg"
-              alt=""
-            />
-            <div>
-              <div><h1 className='font-bold pl-5 text-3xl'>{user.nombre} {user.apellido}</h1></div> 
-              <div><span className='font-semibold text-xl pl-5'>{user.rut}</span></div> 
-              <div><span className='font-semibold text-xl pl-5'>{user.email}</span></div> 
-            </div>
-            <form onSubmit={handleDelete}>
-              <button className='bg-red-500 hover:bg-red-600 rounded-lg p-3 text-white font-bold'>Eliminar</button>
-            </form>
-          </div>
-      </div>
 
-      </div>
-    </div>
 
     <div className=' px-5 py-2'>
       <div className='bg-white rounded-xl shadow-lg p-5 py-3'>
@@ -131,8 +133,8 @@ const Perfil = () => {
               </div>
             </div>
             <div className='flex items-center justify-center pb-5 gap-10 '>
-              <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Actualizar</button>
-              <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Cancelar</button>
+              <button type="submit" className='bg-[#406343] hover:bg-[#32502E] text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Actualizar</button>
+              <button type="submit" className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded w-full lg:w-3/12' onSubmit={''}>Cancelar</button>
             </div>
           </form>
       </div>
